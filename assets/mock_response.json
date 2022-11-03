@@ -1,0 +1,198 @@
+[
+    {
+      "id": 1,
+      "image_url": "https://cdn.frfrstaging.ru/media/cache/46/14/4614229b142f7ea0f2d948ba89fe7ab1.png",
+      "category_name": "Первое",
+      "products": [
+        {
+          "id": 1,
+          "name": "Суси с лососем",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/50/db/50db78bf3efcfdc4f9f165fcd2cdafd6.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 1
+        },
+        {
+          "id": 2,
+          "name": "Суси с копченым лососем",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/9f/9e/9f9ef05582a324fd764c405e75bb676f.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 1
+        },
+        {
+          "id": 3,
+          "name": "Суси с тунцом",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/6c/59/6c599866708d4324a4fef578ad4df5b8.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 1
+        },
+        {
+          "id": 4,
+          "name": "Суси с угрём",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/e0/2b/e02b2eeb283863f79a86527a692f512b.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 1
+        },
+        {
+          "id": 5,
+          "name": "Суси с креветкой",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/af/7d/af7d90bc1858ca06671c913076eed93c.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image_url": "https://cdn.frfrstaging.ru/media/cache/b0/0e/b00e3aabe0f5666a3c66b1d840c54e25.png",
+      "category_name": "Второе",
+      "products": [
+       {
+          "id": 7,
+          "name": "Мисо-суп",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/80/6a/806add459aadb1fa3d70e6edc14a91d1.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 2
+        },
+        {
+          "id": 8,
+          "name": "Мисо-сяке",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/80/6a/806add459aadb1fa3d70e6edc14a91d1.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 2
+        },
+        {
+          "id": 9,
+          "name": "Мисо-унаги",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/25/1f/251fc94c309e2bab5c67e7cfb7c61430.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 2
+        },
+        {
+          "id": 10,
+          "name": "Мисо-эби",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/81/0e/810e4e45739556280bf64bb7bb3831f0.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 2
+        },
+        {
+          "id": 11,
+          "name": "Тест",
+          "image_url": "",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image_url": "https://cdn.frfrstaging.ru/media/cache/42/a6/42a62c8431126204000f97ed5516011f.png",
+      "category_name": "Салаты",
+      "products": [
+       {
+          "id": 12,
+          "name": "Салат греческий",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/c4/df/c4df2aaee71b7089a2a699d87deea42b.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 3
+        },
+        {
+          "id": 13,
+          "name": "Салат цезарь",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/ef/8c/ef8c16e5e4a7ff9c67170782e8975531.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 3
+        },
+        {
+          "id": 14,
+          "name": "Салат с фунчозой",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/e0/27/e0275daacb59882f71a2ea673009ad47.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 3
+        },
+        {
+          "id": 15,
+          "name": "Cалат чука",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/a4/6c/a46c69860fd7f13950db67b2cd894903.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 3
+        },
+        {
+          "id": 16,
+          "name": "Салат шиитаке сарада",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/1a/67/1a67b6341298eb03b0718ec31ec2df71.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image_url": "https://cdn.frfrstaging.ru/media/cache/d9/8e/d98e247ccfb2212e5064922e461181fb.png",
+      "category_name": "Десерты",
+      "products": [
+       {
+          "id": 17,
+          "name": "Рисовые колобки",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/06/4e/064ed96ace94f551a848bc066cb8f853.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 4
+        },
+        {
+          "id": 18,
+          "name": "Тяхан с овощами",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/d9/5d/d95d61219df3553d4ac5698b86860187.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 4
+        },
+        {
+          "id": 19,
+          "name": "Тяхан с курицей",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/8d/83/8d83164eb37809aaded62e2a1376c0c2.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 4
+        },
+        {
+          "id": 20,
+          "name": "Каравай",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/98/48/98484d1edadd13ce5478f8f36af1e12e.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 4
+        },
+        {
+          "id": 21,
+          "name": "Тяхан с лососем",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/23/f0/23f020556bc5a7104ee6d72086b36598.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 4
+        },
+        {
+          "id": 22,
+          "name": "Тяхан с курицей",
+          "image_url": "https://cdn.frfrstaging.ru/media/cache/8d/83/8d83164eb37809aaded62e2a1376c0c2.jpg",
+          "cost": 50,
+          "sizes": "100 г",
+          "categoryId": 4
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "203803586870",
+    "project_id": "farfor-demo",
+    "storage_bucket": "farfor-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203803586870:android:c043c12751f0ef74300397",
+        "android_client_info": {
+          "package_name": "com.farfor.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203803586870-fnofah0e34efp0vkh9uh7p399anrloep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.farfor.demo",
+            "certificate_hash": "6b14c5eda41c728030ac297a9b020ad721827ce0"
+          }
+        },
+        {
+          "client_id": "203803586870-8nlgdvvaq6bc0426f1jh3dkqd6jnjem9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFjbsqbTZCZJjLX8kDYoheyIsalg6gbdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203803586870-8nlgdvvaq6bc0426f1jh3dkqd6jnjem9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "203803586870-cgqlimpkgg0quhj2fmad8qt3hklk6uia.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.farfor.demo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
