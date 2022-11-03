@@ -84,11 +84,17 @@ class UnknownException implements Exception {
   final String detail;
 
   UnknownException({
-    this.title = 'Упс..',
+    this.title = 'Oops..',
     this.detail = 'Неизвестная ошибка',
   });
 }
 
 class CacheException implements Exception {
-  void call() {}
+  final String title;
+  final String detail;
+
+  CacheException({
+    this.title = 'Oops..',
+    this.detail = 'Произошла платформенная ошибка',
+  });
 }

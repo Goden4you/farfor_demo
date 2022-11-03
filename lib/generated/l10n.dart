@@ -90,6 +90,26 @@ class S {
     );
   }
 
+  /// `Oops...`
+  String get oops {
+    return Intl.message(
+      'Oops...',
+      name: 'oops',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oops...`
+  String get platform_error_occuried {
+    return Intl.message(
+      'Oops...',
+      name: 'platform_error_occuried',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Error`
   String get error {
     return Intl.message(

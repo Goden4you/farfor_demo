@@ -1,6 +1,7 @@
 import 'package:farfor_demo/core/constants/strings.dart';
 import 'package:farfor_demo/core/domain/exceptions.dart';
 import 'package:farfor_demo/features/main/data/models/hive/product_hive_model.dart';
+import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 abstract class CartLocalDataSource {
@@ -25,12 +26,11 @@ class CartLocalDataSourceImpl implements CartLocalDataSource {
       return box.isEmpty
           ? []
           : box.keys.map((key) => box.get(key) as ProductHiveModel).toList();
+    } on PlatformException catch (_) {
+      throw CacheException();
     } catch (e, __) {
       throw UnknownException();
     }
-    // } on CacheException catch (e) {
-    //   throw ServerException.fromResponse( // TODO:
-    //       e.response?.data, e.type, e.response?.statusCode);
   }
 
   @override
@@ -46,12 +46,11 @@ class CartLocalDataSourceImpl implements CartLocalDataSource {
       await box.put(product.id, product);
 
       return true;
+    } on PlatformException catch (_) {
+      throw CacheException();
     } catch (e, __) {
       throw UnknownException();
     }
-    // } on CacheException catch (e) {
-    //   throw ServerException.fromResponse( // TODO:
-    //       e.response?.data, e.type, e.response?.statusCode);
   }
 
   @override
@@ -67,11 +66,10 @@ class CartLocalDataSourceImpl implements CartLocalDataSource {
       await box.clear();
 
       return true;
+    } on PlatformException catch (_) {
+      throw CacheException();
     } catch (e, __) {
       throw UnknownException();
     }
-    // } on CacheException catch (e) {
-    //   throw ServerException.fromResponse( // TODO:
-    //       e.response?.data, e.type, e.response?.statusCode);
   }
 }

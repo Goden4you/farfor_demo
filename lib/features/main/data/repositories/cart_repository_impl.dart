@@ -24,11 +24,11 @@ class CartRepositoryImpl implements CartRepository {
       final _normalModels = list.map((e) => ProductModel.fromHive(e)).toList();
 
       return Right(_normalModels);
-    } on ServerException catch (exception) {
-      return Left(
+    } on CacheException catch (exception) {
+      throw Left(
         GeneralFailure(
-          exception.status >= 500 ? exception.title : exception.detail,
-          exception.type,
+          exception.detail,
+          null,
         ),
       );
     } on UnknownException catch (exception) {
@@ -48,6 +48,13 @@ class CartRepositoryImpl implements CartRepository {
           ProductHiveModel.fromModel(product, count: product.count));
 
       return Right(result);
+    } on CacheException catch (exception) {
+      throw Left(
+        GeneralFailure(
+          exception.detail,
+          null,
+        ),
+      );
     } on UnknownException catch (exception) {
       return Left(
         GeneralFailure(
@@ -64,6 +71,13 @@ class CartRepositoryImpl implements CartRepository {
       final result = await localDataSource.removeSavedProducts();
 
       return Right(result);
+    } on CacheException catch (exception) {
+      throw Left(
+        GeneralFailure(
+          exception.detail,
+          null,
+        ),
+      );
     } on UnknownException catch (exception) {
       return Left(
         GeneralFailure(

@@ -3,5 +3,7 @@
     "cart": "Корзина",
     "main_page_title": "Столовка",
     "cart_is_empty": "Корзина пуста",
+    "oops": "Упс..",
+    "platform_error_occuried": "Произошла платформенная ошибка",
     "error": "Ошибка"
 }

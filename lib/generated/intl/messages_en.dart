@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cart_is_empty": MessageLookupByLibrary.simpleMessage("Cart is empty"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
         "main_page_title": MessageLookupByLibrary.simpleMessage("Stolovka"),
-        "menu": MessageLookupByLibrary.simpleMessage("Menu")
+        "menu": MessageLookupByLibrary.simpleMessage("Menu"),
+        "oops": MessageLookupByLibrary.simpleMessage("Oops..."),
+        "platform_error_occuried":
+            MessageLookupByLibrary.simpleMessage("Oops...")
       };
 }
