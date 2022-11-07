@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:farfor_demo/core/utils/navigation_service.dart';
+import 'package:farfor_demo/generated/l10n.dart';
 
 class ServerException implements Exception {
   final String title;
@@ -19,24 +21,34 @@ class ServerException implements Exception {
 
   factory ServerException.fromResponse(
       dynamic data, DioErrorType type, int? statusCode) {
+    final context = NavigationService.navigatorKey.currentContext;
+
     if ([
       DioErrorType.connectTimeout,
       DioErrorType.receiveTimeout,
       DioErrorType.sendTimeout
     ].contains(type)) {
       return ServerException(
-        title: 'Connection error',
+        title: context != null
+            ? S.of(context).connection_error_title
+            : 'Connection error',
         status: 0,
-        detail: 'Oops! Check your internet connection.',
+        detail: context != null
+            ? S.of(context).connection_error_detail
+            : 'Oops! Check your internet connection',
         type: type,
       );
     }
 
     if (type == DioErrorType.other) {
       return ServerException(
-        title: 'Unknown error',
+        title: context != null
+            ? S.of(context).unknown_error_title
+            : 'Unknown error',
         status: 0,
-        detail: 'Error occupired',
+        detail: context != null
+            ? S.of(context).unknown_error_detail
+            : 'Error occupired',
         type: type,
       );
     }
@@ -46,9 +58,13 @@ class ServerException implements Exception {
 
       if (statusCode == 413) {
         return ServerException(
-          title: 'Unknown error',
+          title: context != null
+              ? S.of(context).big_data_error_title
+              : 'Unknown error',
           status: 0,
-          detail: 'Request entity too large. Max 10 MB',
+          detail: context != null
+              ? S.of(context).big_data_error_detail
+              : 'Request entity too large',
           type: type,
         );
       } else if (!_data.startsWith('<html>')) {
@@ -62,17 +78,25 @@ class ServerException implements Exception {
         );
       } else {
         return ServerException(
-          title: 'Unknown error',
+          title: context != null
+              ? S.of(context).unknown_error_title
+              : 'Unknown error',
           status: 0,
-          detail: 'Error occupired',
+          detail: context != null
+              ? S.of(context).unknown_error_detail
+              : 'Error occupired',
           type: type,
         );
       }
     } catch (e) {
       return ServerException(
-        title: 'Unknown error',
+        title: context != null
+            ? S.of(context).unknown_error_title
+            : 'Unknown error',
         status: 0,
-        detail: 'Error occupired',
+        detail: context != null
+            ? S.of(context).unknown_error_detail
+            : 'Error occupired',
         type: type,
       );
     }
@@ -85,7 +109,7 @@ class UnknownException implements Exception {
 
   UnknownException({
     this.title = 'Oops..',
-    this.detail = 'Неизвестная ошибка',
+    this.detail = 'Unknown error',
   });
 }
 
@@ -95,6 +119,6 @@ class CacheException implements Exception {
 
   CacheException({
     this.title = 'Oops..',
-    this.detail = 'Произошла платформенная ошибка',
+    this.detail = 'Platform error',
   });
 }

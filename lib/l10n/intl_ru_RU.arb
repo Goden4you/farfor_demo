@@ -5,5 +5,11 @@
     "cart_is_empty": "Корзина пуста",
     "oops": "Упс..",
     "platform_error_occuried": "Произошла платформенная ошибка",
+    "connection_error_title": "Ошибка соединения",
+    "connection_error_detail": "Упс! Проверьте подключение к интернету",
+    "unknown_error_title": "Неизвестная ошибка",
+    "unknown_error_detail": "Произошла ошибка",
+    "big_data_error_title": "Неизвестная ошибка",
+    "big_data_error_detail": "Размер запроса слишком большой",
     "error": "Ошибка"
 }

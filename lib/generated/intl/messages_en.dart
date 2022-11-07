@@ -22,13 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "big_data_error_detail":
+            MessageLookupByLibrary.simpleMessage("Request entity too large"),
+        "big_data_error_title":
+            MessageLookupByLibrary.simpleMessage("Unknown error"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "cart_is_empty": MessageLookupByLibrary.simpleMessage("Cart is empty"),
+        "connection_error_detail": MessageLookupByLibrary.simpleMessage(
+            "Oops! Check your internet connection"),
+        "connection_error_title": MessageLookupByLibrary.simpleMessage(
+            "Oops! Check your internet connection"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
         "main_page_title": MessageLookupByLibrary.simpleMessage("Stolovka"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
         "oops": MessageLookupByLibrary.simpleMessage("Oops..."),
         "platform_error_occuried":
-            MessageLookupByLibrary.simpleMessage("Oops...")
+            MessageLookupByLibrary.simpleMessage("Oops..."),
+        "unknown_error_detail":
+            MessageLookupByLibrary.simpleMessage("Error occuried"),
+        "unknown_error_title":
+            MessageLookupByLibrary.simpleMessage("Unknown error")
       };
 }

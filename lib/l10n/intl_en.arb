@@ -5,5 +5,11 @@
     "cart_is_empty": "Cart is empty",
     "oops": "Oops...",
     "platform_error_occuried": "Oops...",
+    "connection_error_title": "Oops! Check your internet connection",
+    "connection_error_detail": "Oops! Check your internet connection",
+    "unknown_error_title": "Unknown error",
+    "unknown_error_detail": "Error occuried",
+    "big_data_error_title": "Unknown error",
+    "big_data_error_detail": "Request entity too large",
     "error": "Error"
 }

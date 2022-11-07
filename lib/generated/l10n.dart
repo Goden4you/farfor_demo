@@ -110,6 +110,66 @@ class S {
     );
   }
 
+  /// `Oops! Check your internet connection`
+  String get connection_error_title {
+    return Intl.message(
+      'Oops! Check your internet connection',
+      name: 'connection_error_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oops! Check your internet connection`
+  String get connection_error_detail {
+    return Intl.message(
+      'Oops! Check your internet connection',
+      name: 'connection_error_detail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown error`
+  String get unknown_error_title {
+    return Intl.message(
+      'Unknown error',
+      name: 'unknown_error_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error occuried`
+  String get unknown_error_detail {
+    return Intl.message(
+      'Error occuried',
+      name: 'unknown_error_detail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown error`
+  String get big_data_error_title {
+    return Intl.message(
+      'Unknown error',
+      name: 'big_data_error_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request entity too large`
+  String get big_data_error_detail {
+    return Intl.message(
+      'Request entity too large',
+      name: 'big_data_error_detail',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Error`
   String get error {
     return Intl.message(
