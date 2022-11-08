@@ -5,6 +5,8 @@ class AppColors {
   static const darkGrey = Color(0xFF77777B);
   static const grey = Color(0xFF9EA7B6);
 
+  static const cardShadow = Color(0xFF5666A7);
+
   static const border = Color(0xFFF1F4F9);
 
   static const highlightColor = Color.fromARGB(255, 167, 167, 170);
