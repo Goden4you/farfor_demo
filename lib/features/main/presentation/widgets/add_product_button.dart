@@ -25,7 +25,7 @@ class AddProductButton extends StatelessWidget {
           color: AppColors.green,
           boxShadow: [
             BoxShadow(
-              color: AppColors.green.withOpacity(0.2),
+              color: AppColors.lightGreen.withOpacity(0.2),
               spreadRadius: 2,
               blurRadius: 5,
               offset: const Offset(0, 0), // changes position of shadow
