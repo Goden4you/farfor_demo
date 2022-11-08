@@ -23,39 +23,43 @@ class CategoryCard extends StatelessWidget {
 
         onTap.call();
       },
-      child: SizedBox(
+      child: Container(
         width: (MediaQuery.of(context).size.width - 50) / 2,
-        child: Card(
+        decoration: BoxDecoration(
           color: AppColors.white,
-          shadowColor: AppColors.grey,
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(20, kDebugMode ? 13 : 0, 20, 13),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (kDebugMode)
-                  Image.asset(
-                    AssetsImages.firstCategory,
-                    fit: BoxFit.contain,
-                  )
-                else
-                  Center(
-                      child: CustomImageNetwork(
-                    '${category.imageUrl}',
-                  )),
-                Padding(
-                  padding: const EdgeInsets.only(top: kDebugMode ? 8 : 0),
-                  child: Text(
-                    category.categoryName ?? 'Нет названия',
-                    style: AppTextStyles.medium14pt,
-                  ),
-                ),
-              ],
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.grey.withOpacity(0.1),
+              spreadRadius: 7,
+              blurRadius: 10,
+              offset: const Offset(0, 2), // changes position of shadow
             ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, kDebugMode ? 13 : 0, 20, 13),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (kDebugMode)
+                Image.asset(
+                  AssetsImages.firstCategory,
+                  fit: BoxFit.contain,
+                )
+              else
+                Center(
+                    child: CustomImageNetwork(
+                  '${category.imageUrl}',
+                )),
+              Padding(
+                padding: const EdgeInsets.only(top: kDebugMode ? 8 : 0),
+                child: Text(
+                  category.categoryName ?? 'Нет названия',
+                  style: AppTextStyles.medium14pt,
+                ),
+              ),
+            ],
           ),
         ),
       ),

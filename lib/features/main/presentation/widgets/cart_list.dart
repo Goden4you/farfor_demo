@@ -10,7 +10,6 @@ class CartList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: products.length,
-      padding: const EdgeInsets.symmetric(vertical: 16),
       itemBuilder: (BuildContext context, int index) {
         return CartProductItem(
           product: products[index],

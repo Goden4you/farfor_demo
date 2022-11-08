@@ -32,11 +32,12 @@ class CartProductItem extends StatelessWidget {
             CustomImageNetwork(
               '${product.imageUrl}',
               borderRadius: BorderRadius.circular(10),
+              width: MediaQuery.of(context).size.width / 6,
             ),
           const SizedBox(
             width: 20,
           ),
-          Expanded(
+          Flexible(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -65,7 +66,7 @@ class CartProductItem extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    product.count.toString(),
+                    '${product.count} шт.',
                     style: AppTextStyles.medium12pt,
                   ),
                 ],

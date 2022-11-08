@@ -86,6 +86,15 @@ class _ProductsPageState extends State<ProductsPage> {
                   );
                 }
 
+                if (state.currentCategory?.products?.isEmpty == true) {
+                  return const Center(
+                    child: Text(
+                      'Нет продуктов',
+                      style: AppTextStyles.regular16pt,
+                    ),
+                  );
+                }
+
                 return SingleChildScrollView(
                   child: Padding(
                     padding: const EdgeInsets.all(20),

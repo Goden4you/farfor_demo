@@ -23,6 +23,14 @@ class AddProductButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.green,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.green.withOpacity(0.2),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 0), // changes position of shadow
+            ),
+          ],
           borderRadius: BorderRadius.circular(10),
         ),
         padding: const EdgeInsets.all(14),

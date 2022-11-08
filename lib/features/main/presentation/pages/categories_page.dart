@@ -53,6 +53,15 @@ class CategoriesPage extends StatelessWidget {
               );
             }
 
+            if (state.allCategories?.isEmpty == true) {
+              return const Center(
+                child: Text(
+                  'Нет категорий',
+                  style: AppTextStyles.regular16pt,
+                ),
+              );
+            }
+
             return SingleChildScrollView(
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

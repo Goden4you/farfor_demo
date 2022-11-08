@@ -16,50 +16,47 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: (MediaQuery.of(context).size.width - 55) / 2,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 13),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (kDebugMode)
-              Container(
-                  key: productKey,
-                  child: Image.asset(
-                    AssetsImages.firstProduct,
-                    fit: BoxFit.contain,
-                  ))
-            else
-              Center(
-                child: CustomImageNetwork(
-                  '${product.imageUrl}',
-                  cartKey: productKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (kDebugMode)
+            Container(
+                key: productKey,
+                child: Image.asset(
+                  AssetsImages.firstProduct,
+                  fit: BoxFit.contain,
+                ))
+          else
+            Center(
+              child: CustomImageNetwork(
+                '${product.imageUrl}',
+                cartKey: productKey,
+              ),
+            ),
+          Text(
+            product.name ?? 'Нет названия',
+            style: AppTextStyles.medium12pt,
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 8),
+                child: Text(
+                  product.cost != null ? '${product.cost} ₽' : 'Бесценно :)',
+                  style: AppTextStyles.bold16pt,
                 ),
               ),
-            Text(
-              product.name ?? 'Нет названия',
-              style: AppTextStyles.medium12pt,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: Text(
-                    product.cost != null ? '${product.cost} ₽' : 'Бесценно :)',
-                    style: AppTextStyles.bold16pt,
-                  ),
-                ),
-                AddProductButton(
-                  product: product,
-                  productKey: productKey,
-                ),
-              ],
-            )
-          ],
-        ),
+              AddProductButton(
+                product: product,
+                productKey: productKey,
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
